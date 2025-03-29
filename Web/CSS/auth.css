@@ -1,0 +1,54 @@
+
+body {
+    background-color: #f8f9fa;
+    }
+    
+    .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-body {
+    padding: 2rem;
+    }
+    
+    h1 {
+    color: blueviolet;
+    margin-bottom: 1.5rem;
+    }
+    
+    .btn-primary {
+    background-color: blueviolet;
+    border-color: blueviolet;
+    padding: 0.5rem 2rem;
+    }
+    
+    .btn-primary:hover {
+    background-color: darkviolet;
+    border-color: darkviolet;
+    }
+    
+    .form-control {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    }
+    
+    .form-control:focus {
+    border-color: blueviolet;
+    box-shadow: 0 0 0 0.25rem rgba(138, 43, 226, 0.25);
+    }
+    
+    a {
+    color: blueviolet;
+    text-decoration: none;
+    }
+    
+    a:hover {
+    color: darkviolet;
+    text-decoration: underline;
+    }
+    
+    #register-link {
+    font-weight: bold;
+    }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Interaction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../CSS/index.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar fondoMorado sticky-top">
+        <div class="container-fluid">
+            <h3 class="text-white">¡Bienvenido a CucarronShop! 👋🙂</h3>
+            <form class="d-flex">
+                <button class="btn btn-danger" type="button" id="logout">Cerrar sesión</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h3 class="text-center">¿Que te gustaria hacer?</h3>
+        <div class="text-center mt-4 mb-4">
+            <button class="btn ms-5 me-5 wbtn" id="listarProductos">Listar mis productos</button>
+            <button class="btn ms-5 me-5 wbtn" id="agregarProducto">Agregar un producto</button>
+            <button class="btn ms-5 me-5 wbtn" id="actualizarProducto">Actualizar un producto</button>
+            <button class="btn ms-5 me-5 wbtn" id="borrarProducto">Eliminar un producto</button>
+    </div>
+
+    <div id="formAgregar" class="justify-content-center align-items-center mb-4" style="display: none;">
+        <form class="fondoMoradoForm p-3 ps-5 pe-5 rounded-2" id="itemForm">
+            <h3 class="text-center">Agregar producto</h3>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Descripción</label>
+                <input type="text" class="form-control" id="descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Cantidad</label>
+                <input type="number" class="form-control" id="cantidad" required>
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="precio" required>
+            </div>
+            <button type="submit" class="btn wbtn">Guardar</button>
+        </form>
+    </div>
+
+    <div id="formActualizar" class="justify-content-center align-items-center mb-4" style="display: none;">
+        <form class="fondoMoradoForm p-3 ps-5 pe-5 rounded-2" id="updateForm">
+            <h3 class="text-center">Actualizar producto</h3>
+            <div class="mb-3">
+                <label for="id" class="form-label">Ingresa el ID del producto</label>
+                <input type="text" class="form-control" id="idUpdate" required>
+            </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Ingresa el nombre</label>
+                <input type="text" class="form-control" id="nombreUpdate" required>
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Ingresa la descripción</label>
+                <input type="text" class="form-control" id="descripcionUpdate">
+            </div>
+            <div class="mb-3">
+                <label for="cantidad" class="form-label">Ingresa la cantidad</label>
+                <input type="number" class="form-control" id="cantidadUpdate" required>
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Ingresa el precio</label>
+                <input type="number" class="form-control" id="precioUpdate" required>
+            </div>
+            <button type="submit" class="btn wbtn" id="btnUpdate">Actualizar</button>
+        </form>
+    </div>
+
+    <div id="formBorrar" class="justify-content-center align-items-center mb-4" style="display: none;">
+        <form class="fondoMoradoForm p-3 ps-5 pe-5 rounded-2" id="deleteForm">
+            <h3 class="text-center">Eliminar producto</h3>
+            <div class="mb-3">
+                <label for="id" class="form-label">Ingresa el ID del producto</label>
+                <input type="text" class="form-control" id="idBorrar" required>
+            </div>
+            <button type="submit" class="btn wbtn" id="btnBorrar">Eliminar</button>
+        </form>
+    </div>
+
+    <div class="container mt-5" id="tabla" style="display: none;">
+        <h3>Tus productos</h3>
+        <table class="table mt-4 border border-secondary-subtle">
+            <thead>
+                <tr>
+                    <th class="border-end">ID</th>
+                    <th class="border-end">Nombre</th>
+                    <th class="border-end">Descripción</th>
+                    <th class="border-end">Cantidad</th>
+                    <th class="border-end">Precio (unidad)</th>
+                    <th class="border-end">Total</th>
+                </tr>
+            </thead>
+            <tbody id="itemsTable">
+                
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="../JS/script.js"></script>
+</body>
+</html>

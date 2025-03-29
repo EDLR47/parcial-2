@@ -1,0 +1,19 @@
+.fondoMorado {
+    background-color: blueviolet;
+}
+
+.fondoMoradoForm {
+    background-color: rgba(137, 43, 226, 0.7);
+}
+
+.wbtn {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.wbtn:hover {
+    background-color: darkviolet;
+    color: white;
+}
